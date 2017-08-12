@@ -20,7 +20,7 @@ namespace GeekHunters.GRS.Web
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            this.ConfigAutofac();     
+            this.ConfigAutofac();
         }
 
         private void ConfigAutofac()
