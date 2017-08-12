@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekHunters.GRS.BusinessModels", "GeekHunters.GRS.BusinessModels\GeekHunters.GRS.BusinessModels.csproj", "{17B7417B-5B6A-47A9-912F-318FE2E9EFDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekHunters.GRS.Services", "GeekHunters.GRS.Services\GeekHunters.GRS.Services.csproj", "{E381B3C1-CD20-47E6-96ED-266B1C32091E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekHunters.GRS.DataAccess", "GeekHunters.GRS.DataAccess\GeekHunters.GRS.DataAccess.csproj", "{851D2695-A5F1-4E65-A9D5-ECE06138216A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekHunters.GRS.Services.Test", "GeekHunters.GRS.Services.Test\GeekHunters.GRS.Services.Test.csproj", "{6DE56C62-76F1-4283-B6F8-107C06B183F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekHunters.GRS.Web", "GeekHunters.GRS.Web\GeekHunters.GRS.Web.csproj", "{44DF5071-54C3-448C-8CF9-DFB235D66AE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17B7417B-5B6A-47A9-912F-318FE2E9EFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B7417B-5B6A-47A9-912F-318FE2E9EFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B7417B-5B6A-47A9-912F-318FE2E9EFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B7417B-5B6A-47A9-912F-318FE2E9EFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E381B3C1-CD20-47E6-96ED-266B1C32091E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E381B3C1-CD20-47E6-96ED-266B1C32091E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E381B3C1-CD20-47E6-96ED-266B1C32091E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E381B3C1-CD20-47E6-96ED-266B1C32091E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851D2695-A5F1-4E65-A9D5-ECE06138216A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851D2695-A5F1-4E65-A9D5-ECE06138216A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851D2695-A5F1-4E65-A9D5-ECE06138216A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851D2695-A5F1-4E65-A9D5-ECE06138216A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DE56C62-76F1-4283-B6F8-107C06B183F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE56C62-76F1-4283-B6F8-107C06B183F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE56C62-76F1-4283-B6F8-107C06B183F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE56C62-76F1-4283-B6F8-107C06B183F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44DF5071-54C3-448C-8CF9-DFB235D66AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44DF5071-54C3-448C-8CF9-DFB235D66AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44DF5071-54C3-448C-8CF9-DFB235D66AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44DF5071-54C3-448C-8CF9-DFB235D66AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
