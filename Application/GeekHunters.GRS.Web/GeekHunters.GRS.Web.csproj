@@ -233,6 +233,16 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GeekHunters.GRS.BusinessModels\GeekHunters.GRS.BusinessModels.csproj">
+      <Project>{17b7417b-5b6a-47a9-912f-318fe2e9efdb}</Project>
+      <Name>GeekHunters.GRS.BusinessModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeekHunters.GRS.Services\GeekHunters.GRS.Services.csproj">
+      <Project>{e381b3c1-cd20-47e6-96ed-266b1c32091e}</Project>
+      <Name>GeekHunters.GRS.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
