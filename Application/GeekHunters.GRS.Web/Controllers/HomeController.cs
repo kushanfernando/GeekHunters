@@ -1,4 +1,5 @@
-﻿using GeekHunters.GRS.Services;
+﻿using GeekHunters.GRS.BusinessModels;
+using GeekHunters.GRS.Services;
 using GeekHunters.GRS.Web.ViewModels.Home;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,12 @@ namespace GeekHunters.GRS.Web.Controllers
     {
         private ISkillsService skillsService;
 
-        public HomeController(ISkillsService skillsService)
+        private ICandidateService candidateService;
+
+        public HomeController(ISkillsService skillsService, ICandidateService candidateService)
         {
             this.skillsService = skillsService;
+            this.candidateService = candidateService;
         }
 
         public ActionResult Index()
@@ -26,7 +30,17 @@ namespace GeekHunters.GRS.Web.Controllers
 
         public ActionResult GetCandidatesView()
         {
+            ViewBag.SkillCollection = this.skillsService.GetSkillCollection();
+
             return View("~/Views/Home/_CandidatesView.cshtml");
+        }
+        
+        public ActionResult GetCandidateListView(IEnumerable<int> skillIdCollection)
+        {
+            var model = new CandidateListModel();
+            model.CandidateCollection = this.candidateService.GetAllCandidate(skillIdCollection);
+
+            return View("~/Views/Home/_CandidateListView.cshtml", model);
         }
 
         public ActionResult GetSkillsView()
@@ -44,7 +58,9 @@ namespace GeekHunters.GRS.Web.Controllers
 
         public ActionResult RegisterCandidate(string firstName, string lastName,List<int> skillsCollection)
         {
-            return View();
+            this.candidateService.RegisterCandidate(firstName, lastName, skillsCollection);
+
+            return Content("OK");
         }
     }
 }

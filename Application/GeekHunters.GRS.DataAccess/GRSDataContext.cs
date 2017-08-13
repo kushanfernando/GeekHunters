@@ -62,6 +62,8 @@ namespace GeekHunters.GRS.DataAccess
 
         public DbSet<DbCandidate> tblCandidate { get; set; }
 
+        public DbSet<DbCandidateSkill> tblCandidateSkill { get; set; }
+
         #endregion
 
         #region - Protected Methods -
@@ -69,6 +71,24 @@ namespace GeekHunters.GRS.DataAccess
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(this.connectionString);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<DbCandidateSkill>()
+                .HasKey(c => new { c.CandidateId, c.SkillId });
+
+            modelBuilder
+                .Entity<DbCandidateSkill>()
+                .HasOne(c => c.Candidate)
+                .WithMany(r => r.CandidateSkillCollection)
+                .HasForeignKey(c => c.CandidateId);
+
+            modelBuilder
+                .Entity<DbCandidateSkill>()
+                .HasOne(c => c.Skill)
+                .WithMany(r => r.CandidateSkillCollection)
+                .HasForeignKey(c => c.SkillId);
         }
 
         #endregion

@@ -1,32 +1,27 @@
-﻿<div class="panel panel-default">
-    <!-- Default panel contents -->
-    <div class="panel-heading">Candidates</div>
-    <div class="panel-body">
-        
-    </div>
+﻿@using GeekHunters.GRS.BusinessModels;
 
-    <!-- Table -->
-    <table class="table">
-        
+<div class="k-content wide">
+    <table style="width:100%;">
+        <tr>
+            <td style="width:15%;">Filter by Skills : </td>
+            <td style="width:100%;">
+                <select id="skillsCollection" class="filter-candidate-multiselect" multiple="multiple" data-placeholder="Filter by Skills" style="width: 100%;">
+
+                    @foreach (SkillModel skill in ViewBag.SkillCollection)
+                    {
+                        <option value="@skill.ID">@skill.Name</option>
+                    }
+                </select>
+            </td>
+            <td style="width:20%;">
+                <button class="k-button filter-candidate-btn" id="get">Filter</button>
+            </td>
+        </tr>
     </table>
+</div>
 
-    <nav aria-label="Page navigation">
-        <ul class="pagination">
-            <li>
-                <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-                <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+<div style="margin-top:50px;" id="candidateListView">
+    @{
+        Html.RenderAction("GetCandidateListView", "Home", new { skillIdCollection = Enumerable.Empty<int>(), pageNumber = 0 });
+    }
 </div>

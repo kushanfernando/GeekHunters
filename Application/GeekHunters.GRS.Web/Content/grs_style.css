@@ -1,19 +1,83 @@
 ﻿body {
+    font-family: Calibri;
 }
 
-.loading
-{
+.header {
+    width: 65%;
+    margin: 0 auto;
+    height: 40px;
+    font-family: Calibri;
+    font-size: x-large;
+}
+
+.container {
+    margin-top: 40px;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.loading {
     background-color: black;
     height: 100%;
     opacity: 0.5;
     position: absolute;
     width: 100%;
-    visibility:hidden;
+    visibility: hidden;
 }
 
-.main-content
-{
+.main-content {
     height: 100%;
-    margin-top: 50px;
-    padding-top: 40px;
+    padding-top: 60px;
+}
+
+.table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+    .table tr {
+        height: 30px;
+        border-bottom: 1px solid #EFEFEF;
+    }
+
+    .table td {
+        padding-left: 10px;
+    }
+
+.thead-default {
+    background-color: #e4e4e4;
+    height: 30px;
+}
+
+.container-heading {
+    font-size: large;
+}
+
+.container-body {
+}
+
+.filter-candidate-btn {
+    float: right;
+    height: 35px;
+}
+
+.filter-candidate-multiselect {
+    height: 33px;
+}
+
+.btn-registercandidate {
+    height: 39px;
+    float: right;
+}
+
+.menu {
+    height: 37px;
+    float: left;
+    width: 86%;
+}
+
+.candidate-register-btn {
+    float: right;
+    margin: 5px !important;
 }

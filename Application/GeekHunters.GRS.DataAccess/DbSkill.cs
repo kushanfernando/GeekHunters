@@ -11,9 +11,16 @@ namespace GeekHunters.GRS.DataAccess
     [Table("Skill")]
     public class DbSkill
     {
+        public DbSkill()
+        {
+            this.CandidateSkillCollection = new List<DbCandidateSkill>();
+        }
+
         [Key]
         public int Id { get; set; }
 
         public string Name { get; set; }
+
+        public virtual ICollection<DbCandidateSkill> CandidateSkillCollection { get; set; }
     }
 }

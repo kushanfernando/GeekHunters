@@ -22,14 +22,5 @@ namespace GeekHunters.GRS.Services
                         .Select(Cast)
                         .ToList();
         }
-
-        private SkillModel Cast(DbSkill dbSkill)
-        {
-            return new SkillModel
-            {
-                ID = dbSkill.Id,
-                Name = dbSkill.Name,
-            };
-        }
     }
 }

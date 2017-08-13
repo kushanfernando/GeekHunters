@@ -9,10 +9,10 @@ namespace GeekHunters.GRS.Services
 {
     public interface ICandidateService
     {
-        CandicateModel RegisterCandidate(string firstName, string lastName);
+        CandidateModel RegisterCandidate(string firstName, string lastName, IEnumerable<int> skillsCollection);
 
         void AddCandidateSkill(int candidateID, int skillID);
 
-        List<CandicateModel> GetAllCandidate(CandidateFilter filter);
+        List<CandidateModel> GetAllCandidate(IEnumerable<int> skillIdCollection);
     }
 }

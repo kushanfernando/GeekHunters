@@ -6,7 +6,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container" style="background-color:green;">
+<ul id="menu" class="menu">
+    <li data-url="@Url.Action("GetCandidatesView","Home")">Candidates</li>
+    <li data-url="@Url.Action("GetSkillsView","Home")">Skills</li>
+</ul>
+<button class="k-button btn-registercandidate">Register Candidate</button>
+
+@*<div class="container" style="background-color:green;">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -25,7 +31,7 @@
             </div>
         </div>
     </nav>
-</div>
+</div>*@
 
 <div class="main-content">
 @{

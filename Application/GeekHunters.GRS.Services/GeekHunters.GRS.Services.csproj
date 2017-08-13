@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseService.cs" />
+    <Compile Include="CandidateService.cs" />
     <Compile Include="ICandidateService.cs" />
     <Compile Include="ISkillsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

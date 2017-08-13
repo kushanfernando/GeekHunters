@@ -1,47 +1,43 @@
 ﻿@model GeekHunters.GRS.Web.ViewModels.Home.GeekRegistrationModel
 
-<div class="modal fade modal-addcandidate">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <form method="post" action="@Url.Action("RegisterCandidate","Home")">
-                <div class="modal-header">
-                    <h5 class="modal-title">Register Candidate</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" class="form-control" id="firstName" placeholder="Enter First Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Enter Last Name">
-                    </div>
-                    <fieldset class="form-group">
-                        <legend>Skills</legend>
-                        <ul class="list-group">
-                            @foreach (var skill in Model.SkillCollection)
-                            {
-                                <li class="list-group-item">
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" name="skillsCollection" class="form-check-input" value="@skill.ID">
-                                            @skill.Name
-                                        </label>
-                                    </div>
-                                </li>
-                            }
-                        </ul>
-                    </fieldset>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Register</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                </div>
-            </form>
-        </div>
-    </div>
+<div class="candidate-register-window">
+    <form id="candidate-reg-form">
+        <table style="width:100%">
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>First Name : </td>
+                <td>
+                    <input type="text" name="firstName" class="k-textbox" id="firstName" placeholder="Enter First Name" required validationMessage="Enter First Name">
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name : </td>
+                <td>
+                    <input type="text" name="lastName" class="k-textbox" id="lastName" placeholder="Enter Last Name" required validationMessage="Enter Last Name">
+                </td>
+            </tr>
+            <tr>
+                <td>Skills</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    @foreach (var skill in Model.SkillCollection)
+                    {
+                        <button class="k-button candidate-skill-btn" data-id="@skill.ID">@skill.Name</button>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button class="candidate-register-btn candidate-register-registerbtn k-button k-primary">Register</button>
+                    <button class="candidate-register-btn candidate-register-cancelbtn k-button">Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </form>
 </div>
