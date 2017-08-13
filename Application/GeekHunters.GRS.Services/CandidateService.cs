@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region - References -
 using GeekHunters.GRS.BusinessModels;
 using GeekHunters.GRS.DataAccess;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+#endregion
 
 namespace GeekHunters.GRS.Services
 {
     public class CandidateService : BaseService, ICandidateService
     {
-        public void AddCandidateSkill(int candidateID, int skillID)
-        {
-            throw new NotImplementedException();
-        }
-
+        #region - Public Methods -
+        
         public List<CandidateModel> GetAllCandidate(IEnumerable<int> skillIdCollection)
         {
             try
@@ -92,5 +89,7 @@ namespace GeekHunters.GRS.Services
                 throw;
             }
         }
+
+        #endregion
     }
 }
