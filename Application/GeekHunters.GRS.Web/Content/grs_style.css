@@ -1,0 +1,19 @@
+﻿body {
+}
+
+.loading
+{
+    background-color: black;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    visibility:hidden;
+}
+
+.main-content
+{
+    height: 100%;
+    margin-top: 50px;
+    padding-top: 40px;
+}

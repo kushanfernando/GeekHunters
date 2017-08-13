@@ -4,11 +4,19 @@ namespace GeekHunters.GRS.Services
 {
     public class Util
     {
-        public static string DatabasePath
+        public static string SqliteConnectionString
         {
             get
             {
-                return ConfigurationManager.AppSettings["DatabasePath"];
+                return ConfigurationManager.ConnectionStrings["SqliteConnectionString"].ConnectionString;
+            }
+        }
+
+        public static string ApplicationName
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["ApplicationName"];
             }
         }
     }

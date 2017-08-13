@@ -20,7 +20,7 @@ namespace GeekHunters.GRS.DataAccess
         public GRSDataContext(string connectionString)
             : base()
         {
-
+            this.connectionString = connectionString;
         }
 
         #endregion
@@ -53,6 +53,14 @@ namespace GeekHunters.GRS.DataAccess
                 this.transaction = null;
             }
         }
+
+        #endregion
+
+        #region - Public Properties -
+
+        public DbSet<DbSkill> tblSkills { get; set; }
+
+        public DbSet<DbCandidate> tblCandidate { get; set; }
 
         #endregion
 
