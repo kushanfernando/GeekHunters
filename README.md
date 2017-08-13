@@ -25,3 +25,14 @@ README.md of your fork.
 Good luck!
 
 P.S: And unit tests! We love unit tests!
+
+-----------------
+Note from Kushan
+-----------------
+
+The following third party packages were used
+
+- Autofac
+- EntityFramework7
+- KendoUI Core
+- JQuery
