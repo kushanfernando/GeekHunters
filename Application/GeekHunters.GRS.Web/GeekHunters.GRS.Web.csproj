@@ -277,6 +277,7 @@
     <Compile Include="ViewModels\Home\CandidateListModel.cs" />
     <Compile Include="ViewModels\Home\GeekRegistrationModel.cs" />
     <Compile Include="ViewModels\Home\HomeIndexModel.cs" />
+    <Compile Include="ViewModels\Home\SkillListModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

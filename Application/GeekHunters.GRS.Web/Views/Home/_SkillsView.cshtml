@@ -1,1 +1,14 @@
-﻿Skills View
+﻿@model GeekHunters.GRS.Web.ViewModels.Home.SkillListModel
+
+<div class="demo-section k-content">
+    <div>
+        <label for="optional" id="employees">Skills</label>
+        <br />
+        <ul id="skill-list" title="Skills">
+            @foreach (var skill in Model.SkillCollection)
+            {
+                <li>@skill.Name</li>
+            }
+        </ul>
+    </div>
+</div>

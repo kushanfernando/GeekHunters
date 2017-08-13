@@ -124,6 +124,8 @@ function LoadSkills() {
         url: "/Home/GetSkillsView",
         success: function (data, textStatus) {
             $(".main-content").html(data);
+
+            $("#skill-list").kendoListBox().data("kendoListBox");;
         },
         error: function () {
             alert('Loading Error');

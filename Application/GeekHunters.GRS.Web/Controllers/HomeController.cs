@@ -45,7 +45,12 @@ namespace GeekHunters.GRS.Web.Controllers
 
         public ActionResult GetSkillsView()
         {
-            return View("~/Views/Home/_SkillsView.cshtml");
+            var model = new SkillListModel
+            {
+                SkillCollection = this.skillsService.GetSkillCollection()
+            };
+
+            return View("~/Views/Home/_SkillsView.cshtml", model);
         }
 
         public ActionResult GetGeekRegistrationView()
